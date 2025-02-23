@@ -8,13 +8,18 @@ displaySquares();
 function displaySquares(){
     console.log("starting!");
     console.log(width);
-    for(let i = 0; i < 64; i++){
-        for(let j = 0; j < 64; j++){
+    for(let i = 0; i < 16; i++){
+        for(let j = 0; j < 16; j++){
             let square = document.createElement("div");
             square.classList.add("square")
-            square.style.width = width/64 + "px";
-            square.style.height = height/64 + "px";
+            square.style.width = width/16 + "px";
+            square.style.height = height/16 + "px";
+            square.addEventListener("mouseover", colorSquare);
             canvas.appendChild(square);
         }
     }
+}
+
+function colorSquare(e){
+    e.target.style.backgroundColor = "black";
 }
