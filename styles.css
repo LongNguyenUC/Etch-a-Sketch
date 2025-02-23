@@ -5,8 +5,15 @@
 }
 body{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 100px 0px;
+}
+#changeSizeButton{
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 .canvas-container{
     box-sizing: content-box;
@@ -24,3 +31,4 @@ body{
 .square:hover{
     background-color: black;
 }
+
